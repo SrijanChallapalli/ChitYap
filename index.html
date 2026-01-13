@@ -28,11 +28,6 @@
         </div>
     </nav>
 
-    <div class="sticky-cta-bar" id="sticky-bar">
-        <span>Connect deeply. No noise.</span>
-        <a href="https://apps.apple.com/us/app/chityap/id6757008313" class="btn-download pulse-btn">Get the App</a>
-    </div>
-
     <header class="hero">
         <!-- New Gen: Gradient Orbs -->
         <div class="gradient-orb orb-1"></div>
@@ -45,9 +40,10 @@
             <h1>Connect deeply.<br>Scroll less.</h1>
             <p class="subtitle">A social space designed for humans, not engagement metrics. No algorithms, no infinite
                 feeds, just real connection.</p>
-            <div class="cta-group">
-                <a href="https://apps.apple.com/us/app/chityap/id6757008313" class="btn-primary">Download on App
-                    Store</a>
+            <div class="cta-group" style="justify-content: center;">
+                <a href="https://apps.apple.com/us/app/chityap/id6757008313" class="app-store-badge">
+                    <img src="assets/download.svg" alt="Download on the App Store" />
+                </a>
             </div>
             <p class="micro-copy" style="font-family: 'Space Mono', monospace;">Available on iPhone. Android coming
                 soon.</p>
@@ -129,13 +125,21 @@
                 <h2>Real life, digitized.</h2>
                 <p>Simple, dark-mode interface designed to be easy on your eyes and your mind.</p>
             </div>
-            <div class="screens-grid">
-                <div class="phone-mockup scroll-reveal">
-                    <img src="assets/app-feed.png" alt="ChitYap Home Feed showing posts from friends" />
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                <div class="carousel-track">
+                    <div class="phone-mockup carousel-slide active">
+                        <img src="assets/app-feed.png" alt="ChitYap Home Feed showing posts from friends" />
+                    </div>
+                    <div class="phone-mockup carousel-slide">
+                        <img src="assets/app-profile.png" alt="ChitYap Profile Screen showing memories and friends" />
+                    </div>
                 </div>
-                <div class="phone-mockup scroll-reveal" style="animation-delay: 0.2s;">
-                    <img src="assets/app-profile.png" alt="ChitYap Profile Screen showing memories and friends" />
-                </div>
+                <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            </div>
+            <div class="carousel-dots">
+                <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
             </div>
         </div>
     </section>
