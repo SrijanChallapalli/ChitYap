@@ -462,6 +462,12 @@ footer {
     }
 }
 
+@media (min-width: 1024px) {
+    .challenges-scroll-container {
+        justify-content: center;
+    }
+}
+
 /* Legal/Policy Pages */
 .policy-content {
     padding-top: 120px;
