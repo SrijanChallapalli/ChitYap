@@ -19,18 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollElements = document.querySelectorAll('.scroll-reveal');
     scrollElements.forEach(el => observer.observe(el));
 
-    // STICKY BAR LOGIC
-    // Show bar after scrolling 600px (past hero)
-    const stickyBar = document.getElementById('sticky-bar');
-    if (stickyBar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 600) {
-                stickyBar.classList.add('visible');
-            } else {
-                stickyBar.classList.remove('visible');
-            }
-        });
-    }
+    // STICKY BAR LOGIC REMOVED
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
