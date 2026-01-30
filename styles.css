@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2525fd;
+    /* Approximate blue from the image */
+    display: flex;
+    flex-direction: column;
+    /* Changed to column to stack footer */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    flex-grow: 1;
+    /* Pushes footer down if needed, but centering is priority */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.landing-graphic:hover {
+    transform: scale(1.02);
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-family: sans-serif;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* Legal Page Styles */
+.legal-page {
+    background-color: #2525fd;
+    color: #333;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 40px 20px;
+    display: block;
+    /* Overrides flex centered body of landing page */
+    min-height: 100vh;
+}
+
+.legal-container {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+}
+
+.legal-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #2525fd;
+}
+
+.legal-container h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.legal-container h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.legal-container p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.legal-container ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.legal-container li {
+    margin-bottom: 8px;
+}
+
+.last-updated {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.legal-container a {
+    color: #2525fd;
+    text-decoration: underline;
+}
+
+.back-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2525fd;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 30, 255, 0.3);
+}
+
+/* About Page Rebrand Styles */
+.about-page {
+    background-color: #2525fd;
+    /* Keep the vibrant blue */
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-hero {
+    margin-bottom: 60px;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero .subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #FF8C00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Glassmorphism Cards */
+.values-grid,
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.value-card,
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.value-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: #FF8C00;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+    /* Override styles */
+}
+
+.value-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+}
+
+.testimonial-card cite {
+    font-weight: 700;
+    color: #FF8C00;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Image Testimonials */
+.testimonials-grid.images {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    /* Restrict width for portrait images */
+    justify-content: center;
+}
+
+.testimonial-card.image-wrapper {
+    padding: 10px;
+    /* Less padding for images */
+    background: rgba(255, 255, 255, 0.05);
+    /* Slightly more transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Buttons Large */
+.social-links.large {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.social-btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    color: white !important;
+    /* Ensure text is white */
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.linkedin {
+    background: #0077b5;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid white;
+    padding: 12px 30px;
+}
+
+.btn.outline:hover {
+    background: white;
+    color: #2525fd !important;
+}
