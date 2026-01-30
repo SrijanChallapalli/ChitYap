@@ -69,27 +69,33 @@ body {
 }
 
 .legal-container {
-    background-color: white;
+    /* background-color: white; */
+    /* Removed white background */
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* border-radius: 20px; */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     line-height: 1.6;
+    color: white;
+    /* Ensure base text is white */
 }
 
 .legal-container h1 {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #2525fd;
+    color: white;
+    /* Changed from blue to white */
 }
 
 .legal-container h2 {
     font-size: 20px;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #1a1a1a;
-    border-bottom: 2px solid #f0f0f0;
+    color: white;
+    /* Changed from dark to white */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Lighter border */
     padding-bottom: 5px;
 }
 
@@ -97,18 +103,21 @@ body {
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #444;
+    color: #e0e0e0;
+    /* Slightly off-white */
 }
 
 .legal-container p {
     margin-bottom: 15px;
-    color: #555;
+    color: #f0f0f0;
+    /* Off-white */
 }
 
 .legal-container ul {
     margin-bottom: 15px;
     padding-left: 20px;
-    color: #555;
+    color: #f0f0f0;
+    /* Off-white */
 }
 
 .legal-container li {
@@ -117,13 +126,15 @@ body {
 
 .last-updated {
     font-size: 14px;
-    color: #888;
+    color: rgba(255, 255, 255, 0.7);
+    /* Transparent white */
     margin-bottom: 30px;
     font-style: italic;
 }
 
 .legal-container a {
-    color: #2525fd;
+    color: #FF8C00;
+    /* Orange highlight for links */
     text-decoration: underline;
 }
 
@@ -224,11 +235,7 @@ h2::after {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
 }
 
-.value-card:hover,
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
-}
+/* .testimonial-card:hover removed as per request */
 
 .value-card i {
     font-size: 3rem;
